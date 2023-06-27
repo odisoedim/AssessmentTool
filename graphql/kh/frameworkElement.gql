@@ -1,0 +1,32 @@
+query ($id: ID!) {
+  frameworkElement(id: $id) {
+    id
+    name
+    description
+    children {
+      id
+      name
+      description
+      children {
+        id
+        name
+        description
+        substrategy_questions {
+          id
+          title
+          type
+          answer_options {
+            label
+            value
+          }
+        }
+      }
+    }
+    framework {
+      name
+      id
+      description
+      short_description
+    }
+  }
+}

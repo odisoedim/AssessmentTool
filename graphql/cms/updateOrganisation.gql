@@ -1,0 +1,12 @@
+mutation ($id: ID!, $orgName: String!, $orgPhoto: String, $orgId: String!) {
+  updateOrganisation(
+    input: {
+      data: { orgName: $orgName, orgPhoto: $orgPhoto, orgId: $orgId }
+      where: { id: $id }
+    }
+  ) {
+    organisation {
+      id
+    }
+  }
+}

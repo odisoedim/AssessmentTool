@@ -1,0 +1,8 @@
+query ($id: ID!) {
+  framework(id: $id) {
+    id
+    name
+    description
+    short_description
+  }
+}

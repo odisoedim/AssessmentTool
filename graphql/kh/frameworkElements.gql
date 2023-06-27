@@ -1,0 +1,24 @@
+query ($id: ID!, $parent: ID, $isTop: Boolean) {
+  frameworkElements(
+    where: {
+      framework: { id: $id }
+      parent_null: $isTop
+      parent: { id: $parent }
+    }
+  ) {
+    id
+    name
+    description
+    children {
+      id
+      name
+      description
+    }
+    framework {
+      name
+      id
+      description
+      short_description
+    }
+  }
+}

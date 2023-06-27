@@ -1,0 +1,15 @@
+query ($assessment: [ID]!, $organisation: ID!) {
+  answersStores(
+    where: { assessment: $assessment, organisation: $organisation }
+    sort: "updated:desc"
+  ) {
+    surveyId
+    id
+    progress
+    data
+    updated
+    assessment {
+      id
+    }
+  }
+}

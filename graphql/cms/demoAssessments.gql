@@ -1,0 +1,16 @@
+# Write your query or mutation here
+query {
+  demoAssessments {
+    id
+    name
+    title
+    richDescription
+    framework_id
+    language
+    case_sort_by
+    case_is_approved
+    image {
+      url
+    }
+  }
+}

@@ -1,0 +1,37 @@
+# Write your query or mutation here
+query ($id: ID!) {
+  assessment(id: $id) {
+    id
+    name
+    title
+    richDescription
+    framework_id
+    collection_id
+    tag_id
+    language
+    case_sort_by
+    case_is_approved
+    image {
+      url
+    }
+    questions {
+      id
+      text
+      type
+      priority
+      required
+      model
+      heading
+      blankPlaceholder
+    }
+    substrategy_option {
+      name
+      not_applicable
+      score_0
+      score_25
+      score_50
+      score_75
+      score_100
+    }
+  }
+}

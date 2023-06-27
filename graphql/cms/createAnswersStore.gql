@@ -1,0 +1,32 @@
+mutation (
+  $assessment: ID!
+  $frozenBy: ID
+  $organisation: String!
+  $surveyId: String!
+  $updated: DateTime!
+  $data: JSON!
+  $progress: JSON!
+  $completed: Boolean
+) {
+  createAnswersStore(
+    input: {
+      data: {
+        assessment: $assessment
+        surveyId: $surveyId
+        updated: $updated
+        data: $data
+        progress: $progress
+        organisation: $organisation
+        frozenBy: $frozenBy
+        completed: $completed
+      }
+    }
+  ) {
+    answersStore {
+      id
+      progress
+      data
+      updated
+    }
+  }
+}

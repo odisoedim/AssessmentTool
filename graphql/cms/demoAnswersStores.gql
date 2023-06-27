@@ -1,0 +1,19 @@
+query ($demo_assessment: [ID]!, $organisation: ID!) {
+  demoAnswersStores(
+    where: { demo_assessment: $demo_assessment, organisation: $organisation }
+    sort: "updated:desc"
+  ) {
+    id
+    progress
+    data
+    updated
+    completed
+    frozenBy {
+      id
+      username
+    }
+    demo_assessment {
+      id
+    }
+  }
+}

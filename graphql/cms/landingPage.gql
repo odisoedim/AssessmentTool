@@ -1,0 +1,45 @@
+query {
+  landingPage {
+    started_image {
+      url
+      alternativeText
+    }
+    available_assessment {
+      id
+      image {
+        url
+        alternativeText
+      }
+      title
+      content
+      duration
+      key_elements
+      button_text
+      button_link
+    }
+    benefit {
+      id
+      title
+      content
+      image {
+        url
+        alternativeText
+      }
+    }
+    carousel {
+      id
+      title
+      description
+      avatar {
+        url
+        alternativeText
+      }
+    }
+    meta {
+      title
+      robots
+      description
+      canoical
+    }
+  }
+}

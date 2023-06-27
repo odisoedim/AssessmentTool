@@ -1,0 +1,9 @@
+mutation ($orgName: String!, $orgPhoto: String, $orgId: String!) {
+  createOrganisation(
+    input: { data: { orgName: $orgName, orgPhoto: $orgPhoto, orgId: $orgId } }
+  ) {
+    organisation {
+      id
+    }
+  }
+}

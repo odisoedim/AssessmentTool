@@ -1,0 +1,34 @@
+mutation (
+  $id: ID!
+  $demo_assessment: ID!
+  $frozenBy: ID
+  $organisation: String!
+  $surveyId: String!
+  $updated: DateTime!
+  $data: JSON!
+  $progress: JSON!
+  $completed: Boolean
+) {
+  updateDemoAnswersStore(
+    input: {
+      data: {
+        demo_assessment: $demo_assessment
+        surveyId: $surveyId
+        updated: $updated
+        data: $data
+        progress: $progress
+        frozenBy: $frozenBy
+        organisation: $organisation
+        completed: $completed
+      }
+      where: { id: $id }
+    }
+  ) {
+    demoAnswersStore {
+      id
+      progress
+      data
+      updated
+    }
+  }
+}

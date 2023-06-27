@@ -1,0 +1,14 @@
+query ($id: [ID]!) {
+  frameworkElements(where: { framework: { id: $id }, parent_null: true }) {
+    id
+    children {
+      id
+      name
+      description
+    }
+    framework {
+      id
+      name
+    }
+  }
+}

@@ -1,0 +1,27 @@
+query ($ids: [ID]) {
+  articles(where: { id_in: $ids }, limit: 3) {
+    id
+    title
+    summary
+    created_at
+    updated_at
+    main_image {
+      url
+    }
+    problem
+    solution
+    outcome
+    locations {
+      name
+    }
+    contenttype {
+      name
+    }
+    organizations {
+      logo {
+        url
+      }
+      name
+    }
+  }
+}

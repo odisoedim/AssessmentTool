@@ -1,0 +1,17 @@
+query ($orgId: ID!) {
+  assessments(where: { organisations: { orgId: $orgId } }) {
+    id
+    name
+    title
+    richDescription
+    framework_id
+    collection_id
+    tag_id
+    language
+    case_sort_by
+    case_is_approved
+    image {
+      url
+    }
+  }
+}
